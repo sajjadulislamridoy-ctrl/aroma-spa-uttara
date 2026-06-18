@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, MapPin, Mail, MessageCircle, Send, Star, ChevronDown, ChevronUp } from "lucide-react";
+import { Phone, MapPin, Mail, MessageCircle, Send, Star, ChevronDown, ChevronUp, Facebook } from "lucide-react";
 
 const LOGO_IMAGE = "/manus-storage/058a29a0-6b5c-11f1-a3cc-fbd4bae1063e(2)_42afc896.png";
 const HERO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/hero-banner-5pmpKe6W4qykgycDebMVoH.webp";
@@ -12,7 +12,7 @@ const SERVICES = [
   {
     id: 1,
     name: "Thai Massage",
-    description: "Traditional Thai massage therapy for deep relaxation",
+    description: "Traditional Thai massage therapy for deep relaxation and muscle tension relief",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/thai-massage-Xdvy6EKxXRVL3ParxpYx5x.webp",
     pricing: [
       { duration: "60 Minutes", price: "৳2,500" },
@@ -23,7 +23,7 @@ const SERVICES = [
   {
     id: 2,
     name: "Aroma Therapy",
-    description: "Therapeutic aromatherapy with essential oils",
+    description: "Therapeutic aromatherapy with essential oils for stress relief and wellness",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/aroma-therapy-SgJeeuzoR7nQxeSMfAYW4b.webp",
     pricing: [
       { duration: "60 Minutes", price: "৳2,000" },
@@ -34,7 +34,7 @@ const SERVICES = [
   {
     id: 3,
     name: "Hot Stone Massage",
-    description: "Relaxing massage with heated therapeutic stones",
+    description: "Relaxing massage with heated therapeutic stones for deep muscle relaxation",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/hot-stone-massage-TokuRRdRwDUZRoVmAVTL6i.webp",
     pricing: [
       { duration: "60 Minutes", price: "৳2,800" },
@@ -45,7 +45,7 @@ const SERVICES = [
   {
     id: 4,
     name: "Foot Reflexology",
-    description: "Therapeutic foot massage and reflexology treatment",
+    description: "Therapeutic foot massage and reflexology treatment for overall wellness",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/foot-reflexology-JPCrix97G77deipqZ3g7Rs.webp",
     pricing: [
       { duration: "60 Minutes", price: "৳1,800" },
@@ -56,7 +56,7 @@ const SERVICES = [
   {
     id: 5,
     name: "Facial Treatment",
-    description: "Professional facial care and skincare treatment",
+    description: "Professional facial care and skincare treatment for rejuvenation",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/facial-treatment-iRXbTiJ9U3Lf5fD5G4x6S8.webp",
     pricing: [
       { duration: "60 Minutes", price: "৳2,200" },
@@ -67,7 +67,7 @@ const SERVICES = [
   {
     id: 6,
     name: "Body Massage",
-    description: "Full body relaxation and therapeutic massage",
+    description: "Full body relaxation and therapeutic massage for complete wellness",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/body-massage-TbmaaxPgY75GqngiZcpVtC.webp",
     pricing: [
       { duration: "60 Minutes", price: "৳2,500" },
@@ -172,6 +172,13 @@ export default function Home() {
 
   const handleBookingSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate form
+    if (!bookingForm.name || !bookingForm.phone || !bookingForm.service || !bookingForm.date || !bookingForm.time) {
+      alert("Please fill in all required fields");
+      return;
+    }
+
     const message = `🌟 *Booking Request from Aroma Spa Website* 🌟\n\n*Name:* ${bookingForm.name}\n*Phone:* ${bookingForm.phone}\n*Service:* ${bookingForm.service}\n*Date:* ${bookingForm.date}\n*Time:* ${bookingForm.time}\n${bookingForm.message ? `*Message:* ${bookingForm.message}` : ""}`;
     const whatsappUrl = `https://wa.me/8801780821112?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
@@ -213,16 +220,16 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 flex flex-col items-center justify-center text-center px-4">
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-              স্বাগতম Aroma Spa Uttara-তে
+              Welcome to Aroma Spa Uttara
             </h2>
             <p className="text-lg md:text-xl text-white/95 mb-4">
-              আপনার শরীর ও মনের জন্য চূড়ান্ত শিথিলতা এবং সুস্থতার অভিজ্ঞতা
+              The Ultimate Massage and Wellness Experience
             </p>
             <p className="text-base md:text-lg text-white/90 mb-8">
-              আমরা বিশ্বাস করি সুস্থতা একটি বিলাসিতা নয়, এটি একটি প্রয়োজন। পেশাদার থেরাপিস্ট এবং শান্তিপূর্ণ পরিবেশে আপনার স্বপ্নের স্পা অভিজ্ঞতা পান।
+              At Aroma Spa Uttara, we believe that wellness is not a luxury but a necessity. Experience professional, high-quality spa and massage services in a serene sanctuary designed for your relaxation and rejuvenation.
             </p>
             <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white text-base md:text-lg px-8 py-6">
-              <a href="#booking">এখনই বুকিং করুন</a>
+              <a href="#booking">Book Your Appointment</a>
             </Button>
           </div>
         </div>
@@ -232,34 +239,34 @@ export default function Home() {
       <section id="about" className="py-16 md:py-24 bg-gray-50">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Aroma Spa Uttara সম্পর্কে</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Aroma Spa Uttara</h2>
             <p className="text-lg text-gray-600">
-              Aroma Spa Uttara-তে আমরা বিশ্বাস করি যে সুস্থতা শুধুমাত্র সমৃদ্ধদের জন্য নয়, এটি সবার অধিকার। আমাদের লক্ষ্য পেশাদার, উচ্চমানের স্পা এবং ম্যাসাজ সেবা প্রদান করা যা সবার জন্য সহজলভ্য। উত্তরার হৃদয়ে অবস্থিত, আমরা একটি শান্ত অভয়ারণ্য তৈরি করেছি যেখানে আপনি দৈনন্দিন জীবনের চাপ থেকে মুক্তি পেতে এবং আপনার শরীর ও মন পুনরুজ্জীবিত করতে পারেন।
+              At Aroma Spa Uttara, we believe that wellness is not a luxury but a necessity. Our mission is to provide professional, high-quality spa and massage services that are accessible to everyone. Located in the heart of Uttara, we have created a serene sanctuary where you can escape the stress of daily life and rejuvenate your body and mind.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <Card>
               <CardHeader>
-                <CardTitle className="text-amber-600">পেশাদার দল</CardTitle>
+                <CardTitle className="text-amber-600">Professional Team</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">অভিজ্ঞ এবং প্রশিক্ষিত থেরাপিস্ট যারা আপনার সুস্থতার যাত্রায় নিবেদিত।</p>
+                <p className="text-gray-600">Experienced and trained therapists dedicated to your wellness journey.</p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle className="text-amber-600">প্রিমিয়াম মান</CardTitle>
+                <CardTitle className="text-amber-600">Premium Quality</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">সর্বোচ্চ মানের পণ্য এবং সরঞ্জাম নিশ্চিত করে সেরা স্পা অভিজ্ঞতা।</p>
+                <p className="text-gray-600">High-quality products and equipment ensure the best spa experience.</p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle className="text-amber-600">সাশ্রয়ী মূল্য</CardTitle>
+                <CardTitle className="text-amber-600">Affordable Pricing</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">বিলাসবহুল সেবা সাশ্রয়ী মূল্যে যা সবার বাজেটের মধ্যে।</p>
+                <p className="text-gray-600">Luxury services at reasonable prices within everyone's budget.</p>
               </CardContent>
             </Card>
           </div>
@@ -270,8 +277,8 @@ export default function Home() {
       <section id="services" className="py-16 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">আমাদের সেবা</h2>
-            <p className="text-lg text-gray-600">পেশাদার স্পা এবং সুস্থতা চিকিৎসার বিস্তৃত পরিসর আবিষ্কার করুন</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <p className="text-lg text-gray-600">Discover our comprehensive range of professional spa and wellness treatments</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.map(service => (
@@ -292,7 +299,7 @@ export default function Home() {
                   </div>
                   <Button className="w-full mt-4 bg-amber-600 hover:bg-amber-700">
                     <a href="https://wa.me/8801780821112" target="_blank" rel="noopener noreferrer">
-                      এখনই বুক করুন
+                      Book Now
                     </a>
                   </Button>
                 </CardContent>
@@ -306,8 +313,8 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">কেন আমাদের বেছে নিন?</h2>
-            <p className="text-lg text-gray-600">আমাদের পেশাদার এবং যত্নশীল পদ্ধতির সাথে পার্থক্য অনুভব করুন</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Us?</h2>
+            <p className="text-lg text-gray-600">Experience the difference with our professional and caring approach</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {WHY_CHOOSE_US.map((item, idx) => (
@@ -328,8 +335,8 @@ export default function Home() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">আমাদের গ্রাহকরা কী বলেন</h2>
-            <p className="text-lg text-gray-600">আমাদের মূল্যবান গ্রাহকদের কাছ থেকে প্রকৃত অভিজ্ঞতা</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            <p className="text-lg text-gray-600">Real experiences from our valued customers</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {TESTIMONIALS.map((testimonial, idx) => (
@@ -356,7 +363,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">সাধারণ প্রশ্ন</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
           </div>
           <div className="max-w-2xl mx-auto space-y-4">
             {FAQS.map((faq, idx) => (
@@ -381,29 +388,29 @@ export default function Home() {
         <div className="container">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">আপনার অ্যাপয়েন্টমেন্ট বুক করুন</h2>
-              <p className="text-lg text-gray-600">নিচের ফর্মটি পূরণ করুন এবং আমরা WhatsApp-এ আপনার বুকিং নিশ্চিত করব</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Book Your Appointment</h2>
+              <p className="text-lg text-gray-600">Fill out the form below and we will confirm your booking via WhatsApp</p>
             </div>
             <Card>
               <CardContent className="pt-6">
                 {bookingSuccess && (
                   <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700">
-                    ✓ আপনার বুকিং রিকোয়েস্ট WhatsApp-এ পাঠানো হয়েছে। শীঘ্রই আমরা যোগাযোগ করব!
+                    ✓ Your booking request has been sent to WhatsApp. We will contact you shortly!
                   </div>
                 )}
                 <form onSubmit={handleBookingSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">আপনার নাম</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
                     <Input
                       name="name"
                       value={bookingForm.name}
                       onChange={handleBookingChange}
-                      placeholder="আপনার সম্পূর্ণ নাম"
+                      placeholder="Enter your full name"
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">ফোন নম্বর</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
                     <Input
                       name="phone"
                       value={bookingForm.phone}
@@ -413,7 +420,7 @@ export default function Home() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">সেবা নির্বাচন করুন</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Select Service</label>
                     <select
                       name="service"
                       value={bookingForm.service}
@@ -421,7 +428,7 @@ export default function Home() {
                       className="w-full px-3 py-2 border border-gray-300 rounded-md"
                       required
                     >
-                      <option value="">একটি সেবা বেছে নিন</option>
+                      <option value="">Choose a service</option>
                       {SERVICES.map(service => (
                         <option key={service.id} value={service.name}>{service.name}</option>
                       ))}
@@ -429,7 +436,7 @@ export default function Home() {
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">তারিখ</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Date</label>
                       <Input
                         name="date"
                         type="date"
@@ -439,7 +446,7 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">সময়</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Time</label>
                       <Input
                         name="time"
                         type="time"
@@ -450,18 +457,18 @@ export default function Home() {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">বার্তা (ঐচ্ছিক)</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Message (Optional)</label>
                     <Textarea
                       name="message"
                       value={bookingForm.message}
                       onChange={handleBookingChange}
-                      placeholder="কোনো বিশেষ অনুরোধ বা নোট..."
+                      placeholder="Any special requests or notes..."
                       rows={4}
                     />
                   </div>
                   <Button type="submit" className="w-full bg-amber-600 hover:bg-amber-700 text-white">
                     <Send className="w-4 h-4 mr-2" />
-                    WhatsApp-এ বুকিং পাঠান
+                    Send Booking to WhatsApp
                   </Button>
                 </form>
               </CardContent>
@@ -474,14 +481,14 @@ export default function Home() {
       <section id="contact" className="py-16 md:py-24 bg-gray-50">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">আমাদের সাথে যোগাযোগ করুন</h2>
-            <p className="text-lg text-gray-600">আমরা সবসময় আপনার কথা শুনতে প্রস্তুত। যেকোনো সময় যোগাযোগ করুন।</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+            <p className="text-lg text-gray-600">We are always ready to hear from you. Contact us anytime.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
                 <Phone className="w-8 h-8 text-amber-600 mb-2" />
-                <CardTitle>ফোন</CardTitle>
+                <CardTitle>Phone</CardTitle>
               </CardHeader>
               <CardContent>
                 <a href="tel:01780821112" className="text-amber-600 hover:text-amber-700 font-semibold">
@@ -496,14 +503,14 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <a href="https://wa.me/8801780821112" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 font-semibold">
-                  আমাদের সাথে চ্যাট করুন
+                  Chat with Us
                 </a>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <Mail className="w-8 h-8 text-amber-600 mb-2" />
-                <CardTitle>ইমেইল</CardTitle>
+                <CardTitle>Email</CardTitle>
               </CardHeader>
               <CardContent>
                 <a href="mailto:uttaraspa1230@gmail.com" className="text-amber-600 hover:text-amber-700 font-semibold">
@@ -513,25 +520,30 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader>
-                <MapPin className="w-8 h-8 text-amber-600 mb-2" />
-                <CardTitle>ঠিকানা</CardTitle>
+                <Facebook className="w-8 h-8 text-amber-600 mb-2" />
+                <CardTitle>Facebook</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-sm">
-                  House 29, Road 3/B<br />
-                  Sector 09, Uttara<br />
-                  Dhaka 1230
-                </p>
+                <a href="https://www.facebook.com/share/1BPpzxc3Jc/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 font-semibold">
+                  Follow Us
+                </a>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Location Map */}
+      {/* Location Section */}
       <section className="py-16 md:py-24">
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">আমাদের খুঁজে পান</h2>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Find Us</h2>
+            <div className="max-w-2xl mx-auto text-gray-600 mb-8">
+              <p className="text-lg font-semibold text-gray-900">Aroma Spa Uttara</p>
+              <p>House 29, Road 3/B, Sector 09</p>
+              <p>Uttara, Dhaka 1230, Bangladesh</p>
+            </div>
+          </div>
           <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden">
             <iframe
               width="100%"
@@ -553,19 +565,19 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="font-bold mb-4">Aroma Spa Uttara</h3>
-              <p className="text-gray-400">উত্তরায় আপনার সুস্থতা এবং শিথিলতার অভয়ারণ্য।</p>
+              <p className="text-gray-400">Your sanctuary for wellness and relaxation in Uttara.</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">দ্রুত লিঙ্ক</h4>
+              <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#home" className="hover:text-white transition">হোম</a></li>
-                <li><a href="#services" className="hover:text-white transition">সেবা</a></li>
-                <li><a href="#booking" className="hover:text-white transition">বুকিং</a></li>
-                <li><a href="#contact" className="hover:text-white transition">যোগাযোগ</a></li>
+                <li><a href="#home" className="hover:text-white transition">Home</a></li>
+                <li><a href="#services" className="hover:text-white transition">Services</a></li>
+                <li><a href="#booking" className="hover:text-white transition">Booking</a></li>
+                <li><a href="#contact" className="hover:text-white transition">Contact</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">যোগাযোগ</h4>
+              <h4 className="font-semibold mb-4">Contact Info</h4>
               <ul className="space-y-2 text-gray-400">
                 <li><a href="tel:01780821112" className="hover:text-white transition">01780-821112</a></li>
                 <li><a href="mailto:uttaraspa1230@gmail.com" className="hover:text-white transition">uttaraspa1230@gmail.com</a></li>
@@ -573,7 +585,7 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">আমাদের অনুসরণ করুন</h4>
+              <h4 className="font-semibold mb-4">Follow Us</h4>
               <ul className="space-y-2 text-gray-400">
                 <li><a href="https://www.facebook.com/share/1BPpzxc3Jc/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Facebook</a></li>
                 <li><a href="https://wa.me/8801780821112" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">WhatsApp</a></li>
@@ -582,7 +594,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Aroma Spa Uttara. সর্বাধিকার সংরক্ষিত। | পেশাদার সুস্থতা এবং ম্যাসাজ কেন্দ্র</p>
+            <p>&copy; 2024 Aroma Spa Uttara. All rights reserved. | Professional Wellness and Massage Center</p>
           </div>
         </div>
       </footer>
@@ -601,14 +613,14 @@ export default function Home() {
         <a
           href="tel:01780821112"
           className="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg transition"
-          title="কল করুন"
+          title="Call"
         >
           <Phone className="w-6 h-6" />
         </a>
         <a
           href="#booking"
           className="bg-amber-600 hover:bg-amber-700 text-white rounded-full p-4 shadow-lg transition"
-          title="বুক করুন"
+          title="Book"
         >
           <Send className="w-6 h-6" />
         </a>
