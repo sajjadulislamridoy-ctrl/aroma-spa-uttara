@@ -1,5 +1,13 @@
 {
   "version": "7",
   "dialect": "mysql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1781817910684,
+      "tag": "0000_plain_iron_monger",
+      "breakpoints": true
+    }
+  ]
 }
