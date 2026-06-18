@@ -1,9 +1,16 @@
 # Aroma Spa Uttara Website - Project TODO
 
 ## Phase 1: Setup & Configuration
-- [ ] Copy logo image to project assets
-- [ ] Set up environment variables for business info
-- [ ] Configure database schema for bookings and services
+- [x] Copy logo image to project assets
+- [x] Set up environment variables for business info
+- [x] Configure database schema for bookings and services
+
+## Improvements & Fixes (Priority)
+- [x] Fix logo image display in header
+- [x] Redesign hero section with slider/carousel like Shanti Spa
+- [x] Add attractive welcome message in hero section
+- [x] Fix booking form to redirect directly to WhatsApp after submission
+- [x] Improve overall visual design and styling
 
 ## Phase 2: Core Pages & Layout
 - [x] Create Home/Hero section with banner image
