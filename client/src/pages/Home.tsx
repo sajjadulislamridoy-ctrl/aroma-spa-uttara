@@ -230,7 +230,7 @@ export default function Home() {
       <section 
         className="relative h-96 bg-cover bg-center flex items-center justify-center"
         style={{
-          backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/hero-spa-background-3W5gawXUbdFX6Z63kisATq.webp)',
+          backgroundImage: 'url(/manus-storage/hero-banner_ae46e6f7.jpg)',
           backgroundAttachment: 'fixed'
         }}
       >
