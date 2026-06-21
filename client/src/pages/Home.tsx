@@ -416,10 +416,10 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Map */}
+            {/* 3D Satellite Map */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden h-96">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.751949!2d90.3897095!3d23.8050636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7b8e8e8e8e9%3A0x1234567890abcdef!2sHouse%2029%2C%20Road%203%2FB%2C%20Sector%2009%2C%20Uttara%2C%20Dhaka%201230!5e0!3m2!1sen!2sbd!4v1718900000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.751949!2d90.3897095!3d23.8050636!2m3!1f45!2f30!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7b8e8e8e8e9%3A0x1234567890abcdef!2sHouse%2029%2C%20Road%203%2FB%2C%20Sector%2009%2C%20Uttara%2C%20Dhaka%201230!5e0!3m2!1sen!2sbd!4v1718900000"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
