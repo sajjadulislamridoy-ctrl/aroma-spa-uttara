@@ -13,9 +13,9 @@ const serviceCategories = {
         name: 'Thai Massage',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/thai-massage-service-bi2CHZKp5FN5wMBofKKJwu.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$50' },
-          { duration: '90 Minutes', price: '$70' },
-          { duration: '120 Minutes', price: '$90' }
+          { duration: '60 Minutes', price: '5000 BDT' },
+          { duration: '90 Minutes', price: '7500 BDT' },
+          { duration: '120 Minutes', price: '10000 BDT' }
         ]
       },
       {
@@ -23,9 +23,9 @@ const serviceCategories = {
         name: 'Body Massage',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/body-massage-service-EocuoMpMg2sGnpyJDaqVzb.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$45' },
-          { duration: '90 Minutes', price: '$65' },
-          { duration: '120 Minutes', price: '$85' }
+          { duration: '60 Minutes', price: '5000 BDT' },
+          { duration: '90 Minutes', price: '7000 BDT' },
+          { duration: '120 Minutes', price: '8000 BDT' }
         ]
       },
       {
@@ -33,9 +33,9 @@ const serviceCategories = {
         name: 'Hot Stone Massage',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/hot-stone-massage-service-YAfHrUBEQQoN2rVzMbq3wy.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$55' },
-          { duration: '90 Minutes', price: '$75' },
-          { duration: '120 Minutes', price: '$95' }
+          { duration: '60 Minutes', price: '6000 BDT' },
+          { duration: '90 Minutes', price: '8000 BDT' },
+          { duration: '120 Minutes', price: '12000 BDT' }
         ]
       },
       {
@@ -43,9 +43,9 @@ const serviceCategories = {
         name: 'Deep Tissue Massage',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/deep-tissue-massage-service-FBd5h8gtU2vcMjmDzJQAuf.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$50' },
-          { duration: '90 Minutes', price: '$70' },
-          { duration: '120 Minutes', price: '$90' }
+          { duration: '60 Minutes', price: '4000 BDT' },
+          { duration: '90 Minutes', price: '6000 BDT' },
+          { duration: '120 Minutes', price: '8000 BDT' }
         ]
       },
       {
@@ -53,9 +53,9 @@ const serviceCategories = {
         name: 'Dry Massage',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/dry-massage-service-EgkyEF8vE6txFVzFCYfRPX.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$35' },
-          { duration: '90 Minutes', price: '$50' },
-          { duration: '120 Minutes', price: '$65' }
+          { duration: '60 Minutes', price: '4000 BDT' },
+          { duration: '90 Minutes', price: '6000 BDT' },
+          { duration: '120 Minutes', price: '8000 BDT' }
         ]
       },
       {
@@ -63,9 +63,9 @@ const serviceCategories = {
         name: 'Back & Shoulder Massage',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/back-shoulder-massage-service-ANada9EiAwKnBUFnC3LNJ5.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$45' },
-          { duration: '90 Minutes', price: '$65' },
-          { duration: '120 Minutes', price: '$85' }
+          { duration: '60 Minutes', price: '5000 BDT' },
+          { duration: '90 Minutes', price: '7500 BDT' },
+          { duration: '120 Minutes', price: '10000 BDT' }
         ]
       },
       {
@@ -73,9 +73,9 @@ const serviceCategories = {
         name: 'Oil Massage',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/oil-massage-service-Qu3okjJuJLTcxeZc6K3GvA.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$45' },
-          { duration: '90 Minutes', price: '$65' },
-          { duration: '120 Minutes', price: '$85' }
+          { duration: '60 Minutes', price: '5000 BDT' },
+          { duration: '90 Minutes', price: '7500 BDT' },
+          { duration: '120 Minutes', price: '10000 BDT' }
         ]
       },
       {
@@ -83,9 +83,9 @@ const serviceCategories = {
         name: 'Four Hand Massage',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/four-hand-massage-service-9PUMeiNKSoRfX2KvorxNex.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$80' },
-          { duration: '90 Minutes', price: '$110' },
-          { duration: '120 Minutes', price: '$140' }
+          { duration: '60 Minutes', price: '11000 BDT' },
+          { duration: '90 Minutes', price: '16000 BDT' },
+          { duration: '120 Minutes', price: '20000 BDT' }
         ]
       },
       {
@@ -93,9 +93,9 @@ const serviceCategories = {
         name: 'Aroma Oil Massage',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/aroma-oil-massage-service-RuA9V8ipmgxm6NHRKsQfuh.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$55' },
-          { duration: '90 Minutes', price: '$75' },
-          { duration: '120 Minutes', price: '$95' }
+          { duration: '60 Minutes', price: '5000 BDT' },
+          { duration: '90 Minutes', price: '7000 BDT' },
+          { duration: '120 Minutes', price: '10000 BDT' }
         ]
       }
     ]
@@ -108,9 +108,9 @@ const serviceCategories = {
         name: 'Aroma Therapy',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/aroma-therapy-service-HD7vEsc2gsaqoq5pJ7dDdU.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$40' },
-          { duration: '90 Minutes', price: '$60' },
-          { duration: '120 Minutes', price: '$80' }
+          { duration: '60 Minutes', price: '5000 BDT' },
+          { duration: '90 Minutes', price: '7500 BDT' },
+          { duration: '120 Minutes', price: '10000 BDT' }
         ]
       },
       {
@@ -118,9 +118,9 @@ const serviceCategories = {
         name: 'Foot Reflexology',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/foot-reflexology-service-43Hy7a7JMEpG6LmW6Dob7q.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$40' },
-          { duration: '90 Minutes', price: '$60' },
-          { duration: '120 Minutes', price: '$80' }
+          { duration: '60 Minutes', price: '4000 BDT' },
+          { duration: '90 Minutes', price: '6000 BDT' },
+          { duration: '120 Minutes', price: '8000 BDT' }
         ]
       },
       {
@@ -128,9 +128,9 @@ const serviceCategories = {
         name: 'Facial Treatment',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/facial-treatment-service-aK8yqpEBbdKs9DVoh9Z4MY.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$50' },
-          { duration: '90 Minutes', price: '$70' },
-          { duration: '120 Minutes', price: '$90' }
+          { duration: '60 Minutes', price: '5000 BDT' },
+          { duration: '90 Minutes', price: '7500 BDT' },
+          { duration: '120 Minutes', price: '9000 BDT' }
         ]
       },
       {
@@ -138,9 +138,9 @@ const serviceCategories = {
         name: 'Elegant Special Massage',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/elegant-special-massage-service-hTJ4ntL5RjPN8zYTdxWLWT.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$65' },
-          { duration: '90 Minutes', price: '$90' },
-          { duration: '120 Minutes', price: '$115' }
+          { duration: '60 Minutes', price: '7500 BDT' },
+          { duration: '90 Minutes', price: '10000 BDT' },
+          { duration: '120 Minutes', price: '15000 BDT' }
         ]
       },
       {
@@ -148,9 +148,9 @@ const serviceCategories = {
         name: 'Thai Traditional Massage',
         image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/thai-traditional-massage-service-Z7hfv6M7Zgjh4KAQRhgabt.webp',
         pricing: [
-          { duration: '60 Minutes', price: '$50' },
-          { duration: '90 Minutes', price: '$70' },
-          { duration: '120 Minutes', price: '$90' }
+          { duration: '60 Minutes', price: '5000 BDT' },
+          { duration: '90 Minutes', price: '7500 BDT' },
+          { duration: '120 Minutes', price: '10000 BDT' }
         ]
       }
     ]
@@ -416,10 +416,10 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 3D Satellite Map */}
+            {/* 3D Street View Map */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden h-96">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.751949!2d90.3897095!3d23.8050636!2m3!1f45!2f30!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7b8e8e8e8e9%3A0x1234567890abcdef!2sHouse%2029%2C%20Road%203%2FB%2C%20Sector%2009%2C%20Uttara%2C%20Dhaka%201230!5e0!3m2!1sen!2sbd!4v1718900000"
+                src="https://www.google.com/maps/embed?pb=!4v1718900000!6m8!1m7!1sb-jbJUfx9e1lVSrSJEO2Sg!2m2!1d23.8775521!2d90.3990835!3f233.72758!4f0!5f0.7820865974627469"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
