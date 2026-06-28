@@ -208,7 +208,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <img 
-              src="/manus-storage/058a29a0-6b5c-11f1-a3cc-fbd4bae1063e(2)_6c809137.png" 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663774431221/LT5ZWTzwr2FoeyCjZuGkmK/aroma-spa-logo-058a29a0.png" 
               alt="Aroma Spa Logo" 
               className="h-12 w-12 object-contain"
             />
